@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+# description: Python GIL tracer
+# args: [-h] [-o] [-r]
+
+perf script -s "$PERF_EXEC_PATH"/scripts/python/python-gil-tracer.py -- "$@"

@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+perf record \
+	-e sched:sched_switch \
+	-e sched:sched_process_fork \
+	-e 'sched:sched_wak*' \
+	--call-graph dwarf \
+	-k CLOCK_MONOTONIC "$@"
